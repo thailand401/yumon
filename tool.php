@@ -3,10 +3,12 @@
 <head>
 	<title>Tool create objects</title>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fabric.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltip.js"></script>
 	<script type="text/javascript" src="js/cards.js"></script>
 	<script type="text/javascript" src="js/skills.js"></script>
 	<script type="text/javascript" src="js/yumon.js"></script>
+
 	<style type="text/css">
 		p{
 			margin: 2px 0;
@@ -133,7 +135,7 @@
 	</div>
 
 	<div id="panel">
-		<div id="yumon">
+		<!--div id="yumon">
 			<img class="rscard" src="">
 			<img class="rsmon" src="">
 			<div class="txt nm"></div>
@@ -143,7 +145,8 @@
 			<div class="txt sk1">-skill thu 1</div>
 			<div class="txt sk2">-skill thu 2</div>
 			<div class="txt sk3">-skill thu 3</div>
-		</div>
+		</div-->
+		<canvas id="c" width="100" height="146" ></canvas>
 		<div id="control"></div>
 	</div>
 
