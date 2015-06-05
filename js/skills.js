@@ -1,7 +1,7 @@
 Skills = function(options){
 	return {
 		id: options[0],
-		name: options[1],
+		name: options[1], //name
 		require: options[2], // mana
 		affect: options[3], // team | enemy
 		type: options[4], // 0,1,2 : attack, defense, effect
