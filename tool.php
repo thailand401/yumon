@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Tool create objects</title>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -118,6 +119,9 @@
 
 		}
 	</style>
+	<script type="text/javascript">
+	var Skills = <?php echo file_get_contents(getcwd()."/data/skill.json"); ?>;
+	</script>
 </head>
 
 <body>
@@ -131,6 +135,10 @@
 		<option value="5">Insect</option>
 		<option value="6">Mistery</option>
 		<option value="7">Air</option>
+		<option value="8">Mistery</option>
+		<option value="9">Air</option>
+		<option value="10">Mistery</option>
+		<option value="11">Air</option>
 	</select>
 	<button class="button FL" onclick="addCard();">Add Card</button><br><br>
 	<!--div class="FL" style="height:140px;"></div-->
@@ -166,7 +174,11 @@
 		Mana :<input id="smana" type="text" name="ten" /><br>
 		Type :<input id="stype" type="text" name="ten" /><br>
 		Objects :<input id="smon" type="text" name="ten" /><br>
-		<select id="card" class="button">
+		<select id="ssmon" class="button">
+			<option value="-1">All</option>
+			<option value="-2">Seft</option>
+			<option value="-3">Team</option>
+			<option value="-4">Enemy</option>
 			<option value="0">Metal</option>
 			<option value="1">Plant</option>
 			<option value="2">Water</option>
@@ -175,6 +187,10 @@
 			<option value="5">Insect</option>
 			<option value="6">Mistery</option>
 			<option value="7">Air</option>
+			<option value="8">Mistery</option>
+			<option value="9">Air</option>
+			<option value="10">Mistery</option>
+			<option value="11">Air</option>
 		</select><br>
 		<button class="button" onclick="addMon();">Add Mon</button><button class="button" onclick="saveSkill();">SAVE</button>
 

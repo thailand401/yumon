@@ -81,6 +81,7 @@ $(document).ready(function(){
 
 })
 function saveSkill () {
+	if($("#sname").val()=="") return;
 	sdata = {
 		sname: $("#sname").val(),
 		svalue: $("#svalue").val(),
@@ -88,8 +89,16 @@ function saveSkill () {
 		smon: $("#smon").val(),
 		stype: $("#stype").val()
 	};
-
-	$.post("saveskill.php", {data: JSON.stringify(sdata)}, function(rp){
-		console.log(rp);
+	Skills.push(sdata);
+	$.post("saveskill.php", {data: JSON.stringify(Skills)}, function(rp){
+		alert(rp);
+		$("#sname").val("");
+		$("#svalue").val("");
+		$("#smana").val("");
+		$("#smon").val("");
+		$("#stype").val("");
 	})
+}
+function addMon(){
+	$("#smon").val( $("#smon").val() + $('#ssmon').val()+"," );
 }
