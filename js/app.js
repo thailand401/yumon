@@ -80,3 +80,16 @@ $(document).ready(function(){
 	});
 
 })
+function saveSkill () {
+	sdata = {
+		sname: $("#sname").val(),
+		svalue: $("#svalue").val(),
+		smana: $("#smana").val(),
+		smon: $("#smon").val(),
+		stype: $("#stype").val()
+	};
+
+	$.post("saveskill.php", {data: JSON.stringify(sdata)}, function(rp){
+		console.log(rp);
+	})
+}

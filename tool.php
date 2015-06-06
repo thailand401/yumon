@@ -111,10 +111,17 @@
 			left: 16px;
 			font-size: 9px;
 		}
+		.skill{
+			margin-top: 10px;
+		}
+		#control{
+
+		}
 	</style>
 </head>
 
 <body>
+<div style="width:50%;">
 	<select id="card" class="button FL">
 		<option value="0">Metal</option>
 		<option value="1">Plant</option>
@@ -127,14 +134,15 @@
 	</select>
 	<button class="button FL" onclick="addCard();">Add Card</button><br><br>
 	<!--div class="FL" style="height:140px;"></div-->
+	<div style="width:100%;height:2px;border:1px solid #000;"></div><br>
 	<div id="mon1" class="mon">
 		<div class="inside"></div>
 	</div>
 	<div id="mon2" class="mon">
 		<div class="inside"></div>
-	</div>
-
-	<div id="panel">
+	</div><br>
+	<div style="width:100%;height:2px;border:1px solid #000;"></div>
+	<div id="panel" style="width:100%;height:150px;margin-top:20px;">
 		<!--div id="yumon">
 			<img class="rscard" src="">
 			<img class="rsmon" src="">
@@ -146,10 +154,32 @@
 			<div class="txt sk2">-skill thu 2</div>
 			<div class="txt sk3">-skill thu 3</div>
 		</div-->
-		<canvas id="c" width="100" height="146" ></canvas>
-		<div id="control"></div>
+		<div class="FL"><canvas id="c" width="100" height="146" ></canvas></div>
+		<div id="control" class="FL"></div>
 	</div>
+	<br>
+	<div style="width:100%;height:2px;border:1px solid #000;"></div>
+	<br>
+	<div class="skill">
+		Name :<input id="sname" type="text" name="ten" /><br>
+		Value :<input id="svalue" type="text" name="ten" /><br>
+		Mana :<input id="smana" type="text" name="ten" /><br>
+		Type :<input id="stype" type="text" name="ten" /><br>
+		Objects :<input id="smon" type="text" name="ten" /><br>
+		<select id="card" class="button">
+			<option value="0">Metal</option>
+			<option value="1">Plant</option>
+			<option value="2">Water</option>
+			<option value="3">Fire</option>
+			<option value="4">Earth</option>
+			<option value="5">Insect</option>
+			<option value="6">Mistery</option>
+			<option value="7">Air</option>
+		</select><br>
+		<button class="button" onclick="addMon();">Add Mon</button><button class="button" onclick="saveSkill();">SAVE</button>
 
+	</div>
+</div>
 </body>
 <script type="text/javascript" src="js/app.js"></script>
 </html>
