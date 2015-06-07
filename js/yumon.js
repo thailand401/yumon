@@ -36,104 +36,119 @@ Class = [
 	},
 	{
 		name : "air",
-		type : 0,
+		type : 7,
+		resource : "card_metal.png"
+	},
+	{
+		name : "electric",
+		type : 9,
+		resource : "card_metal.png"
+	},
+	{
+		name : "feather",
+		type : 9,
+		resource : "card_metal.png"
+	},
+	{
+		name : "legend",
+		type : 10,
 		resource : "card_metal.png"
 	},
 ]
 
 Mon = [
 	{
-		name : "beesight",
+		name : "Beesight",
 		resource : "beesight.png",
 		type : 5
 	},
 	{
-		name : "bellsprout",
+		name : "Bellsprout",
 		resource : "bellsprout.png",
 		type : 1
 	},
 	{
-		name : "bulbasaur",
+		name : "Bulbasaur",
 		resource : "bulbasaur.png",
 		type : 1
 	},
 	{
-		name : "caterpie",
+		name : "Caterpie",
 		resource : "caterpie.png",
 		type : 5
 	},
 	{
-		name : "centipede",
+		name : "Centipede",
 		resource : "centipede.png",
 		type : 4
 	},
 	{
-		name : "chansey",
+		name : "Chansey",
 		resource : "chansey.png",
 		type : 6
 	},
 	{
-		name : "charmander",
+		name : "Charmander",
 		resource : "charmander.png",
 		type : 3
 	},
 	{
-		name : "cobrinski",
+		name : "Cobrinski",
 		resource : "cobrinski.png",
 		type : 6
 	},
 	{
-		name : "digger",
+		name : "Digger",
 		resource : "digger.png",
 		type : 4
 	},
 	{
-		name : "doduo",
+		name : "Doduo",
 		resource : "doduo.png",
 		type : 7
 	},
 	{
-		name : "eevee",
+		name : "Eevee",
 		resource : "eevee.png",
 		type : 6
 	},
 	{
-		name : "growlithe",
+		name : "Growlithe",
 		resource : "growlithe.png",
 		type : 3
 	},
 	{
-		name : "hehorse",
+		name : "Hehorse",
 		resource : "hehorse.png",
 		type : 2
 	},
 		{
-		name : "muk",
+		name : "Muk",
 		resource : "muk.png",
 		type : 4
 	},
 	{
-		name : "oddish",
+		name : "Oddish",
 		resource : "oddish.png",
 		type : 1
 	},
 	{
-		name : "payduck",
+		name : "Payduck",
 		resource : "payduck.png",
 		type : 7
 	},
 	{
-		name : "ratatat",
+		name : "Ratatat",
 		resource : "ratatat.png",
 		type : 4
 	},
 	{
-		name : "squirle",
+		name : "Squirle",
 		resource : "squirle.png",
 		type : 2
 	},
 	{
-		name : "stupidbird",
+		name : "Stupidbird",
 		resource : "stupidbird.png",
 		type : 7
 	}

@@ -116,17 +116,19 @@
 			margin-top: 10px;
 		}
 		#control{
-
+			padding-left: 20px;
 		}
 	</style>
 	<script type="text/javascript">
 	var Skills = <?php echo file_get_contents(getcwd()."/data/skill.json"); ?>;
+	var Inc = <?php echo file_get_contents(getcwd()."/data/inc.json"); ?>;
 	</script>
 </head>
 
 <body>
-<div style="width:50%;">
+<div class="FL" style="width:50%;">
 	<select id="card" class="button FL">
+		<option value="-1">All</option>
 		<option value="0">Metal</option>
 		<option value="1">Plant</option>
 		<option value="2">Water</option>
@@ -135,10 +137,9 @@
 		<option value="5">Insect</option>
 		<option value="6">Mistery</option>
 		<option value="7">Air</option>
-		<option value="8">Mistery</option>
-		<option value="9">Air</option>
-		<option value="10">Mistery</option>
-		<option value="11">Air</option>
+		<option value="8">Electric</option>
+		<option value="9">Feather</option>
+		<option value="10">Legend</option>
 	</select>
 	<button class="button FL" onclick="addCard();">Add Card</button><br><br>
 	<!--div class="FL" style="height:140px;"></div-->
@@ -163,22 +164,26 @@
 			<div class="txt sk3">-skill thu 3</div>
 		</div-->
 		<div class="FL"><canvas id="c" width="100" height="146" ></canvas></div>
-		<div id="control" class="FL"></div>
+		<div id="control" class="FL">
+			HP :<input id="sethp" type="text" name="hp" /><br>
+			Dame :<input id="setdame" type="text" name="dame" /><br>
+			Mana :<input id="setmana" type="text" name="mana" /><br>
+			Up :<input id="setup" type="text" name="up" /><br>
+			Item :<input id="setitem" type="text" name="item" /><br>
+			Sk 1: <select id="listskill1"></select><br>
+			Sk 2: <select id="listskill2"></select>
+		</div>
 	</div>
 	<br>
 	<div style="width:100%;height:2px;border:1px solid #000;"></div>
 	<br>
-	<div class="skill">
+	<div class="skill FL" style="width:60%;">
 		Name :<input id="sname" type="text" name="ten" /><br>
 		Value :<input id="svalue" type="text" name="ten" /><br>
 		Mana :<input id="smana" type="text" name="ten" /><br>
 		Type :<input id="stype" type="text" name="ten" /><br>
 		Objects :<input id="smon" type="text" name="ten" /><br>
 		<select id="ssmon" class="button">
-			<option value="-1">All</option>
-			<option value="-2">Seft</option>
-			<option value="-3">Team</option>
-			<option value="-4">Enemy</option>
 			<option value="0">Metal</option>
 			<option value="1">Plant</option>
 			<option value="2">Water</option>
@@ -187,15 +192,22 @@
 			<option value="5">Insect</option>
 			<option value="6">Mistery</option>
 			<option value="7">Air</option>
-			<option value="8">Mistery</option>
-			<option value="9">Air</option>
-			<option value="10">Mistery</option>
-			<option value="11">Air</option>
+			<option value="8">Electric</option>
+			<option value="9">Feather</option>
+			<option value="10">Legend</option>
 		</select><br>
 		<button class="button" onclick="addMon();">Add Mon</button><button class="button" onclick="saveSkill();">SAVE</button>
-
+		<button class="button editmon" onclick="editSkill();">EDIT</button>
+	</div>
+	<div class="listskill FL" style="padding-left:20px;">
+		<select id="listskill" class="FL">
+			
+		</select><br>
+		<button class="button FL" onclick="deleteSkill();">Delete</button>
+		<button class="button FL" onclick="showSkill();">Show</button>
 	</div>
 </div>
+<img src="img/class.jpg">
 </body>
 <script type="text/javascript" src="js/app.js"></script>
 </html>
