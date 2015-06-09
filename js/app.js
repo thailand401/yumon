@@ -20,6 +20,7 @@ $(document).ready(function(){
 			{
 				cardRef._element.src = "img/"+Class[i].resource;
 				canvas.renderAll();
+				canvas.renderAll();
 			}
 		};
 		
@@ -34,6 +35,7 @@ $(document).ready(function(){
 		i = parseInt($(this).attr("data"));
 		nmRef.text = Mon[i].name;
 		monRef._element.src = "img/mon/"+Mon[i].resource;
+		canvas.renderAll();
 		canvas.renderAll();
 	})
 	$(".mon img").tipsy({gravity: 'n', html: true});
@@ -58,7 +60,7 @@ $(document).ready(function(){
 			var text = new fabric.Text('name', {
 				id: "nm",
 			    fontSize: 10,
-			    top: 1,
+			    top: 3,
 			    left: 12,
 			    fontFamily: 'cursive',
 			});
@@ -66,8 +68,8 @@ $(document).ready(function(){
 			canvas.add(text);
 			var text1 = new fabric.Text('1', {
 				id: "lv",
-			    fontSize: 16,
-			    top: 59,
+			    fontSize: 14,
+			    top: 62,
 			    left: 81,
 			    fontFamily: 'cursive',
 			});
@@ -77,7 +79,7 @@ $(document).ready(function(){
 				id: "hp",
 			    fontSize: 14,
 			    top: 82,
-			    left: 18,
+			    left: 25,
 			    fontFamily: 'cursive',
 			});
 			hpRef = text2;
@@ -93,19 +95,21 @@ $(document).ready(function(){
 			canvas.add(text3);
 			var text4 = new fabric.Text('-skill 1', {
 				id: "sk1",
+				textAlign: 'left',
 			    fontSize: 10,
 			    top: 110,
-			    left: 16,
+			    left: 10,
 			    fontFamily: 'cursive',
 			});
 			sk1Ref = text4;
 			canvas.add(text4);
 
 			var text5 = new fabric.Text('-skill 2', {
-				id: "sk1",
+				id: "sk2",
+				textAlign: 'left',
 			    fontSize: 10,
 			    top: 124,
-			    left: 16,
+			    left: 10,
 			    fontFamily: 'cursive',
 			});
 			sk2Ref = text5;
@@ -183,4 +187,19 @@ function editSkill(){
 }
 function addMon(){
 	$("#smon").val( $("#smon").val() + $('#ssmon').val()+"," );
+}
+function applyMon(){
+	if($("#sethp").val().length==2)
+		hpRef.left = 25;
+	else
+		hpRef.left = 18;
+	hpRef.text = $("#sethp").val();
+	dmRef.text = $("#setdame").val();
+	sk1Ref.text = $("#listskill1 option:selected").text();
+	sk2Ref.text = $("#listskill2 option:selected").text();
+	canvas.renderAll();
+	canvas.renderAll();
+}
+function saveMon(){
+	console.log(canvas.toDataURL("png"));
 }

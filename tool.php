@@ -172,6 +172,7 @@
 			Item :<input id="setitem" type="text" name="item" /><br>
 			Sk 1: <select id="listskill1"></select><br>
 			Sk 2: <select id="listskill2"></select>
+			<button class="button" onclick="applyMon();">Apply</button>
 		</div>
 	</div>
 	<br>

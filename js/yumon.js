@@ -27,7 +27,7 @@ Class = [
 	{
 		name : "insect",
 		type : 5,
-		resource : "card_plant.png"
+		resource : "card_insect.png"
 	},
 	{
 		name : "mistery",
@@ -37,22 +37,22 @@ Class = [
 	{
 		name : "air",
 		type : 7,
-		resource : "card_metal.png"
+		resource : "card_air.png"
 	},
 	{
 		name : "electric",
-		type : 9,
-		resource : "card_metal.png"
+		type : 8,
+		resource : "card_electric.png"
 	},
 	{
 		name : "feather",
 		type : 9,
-		resource : "card_metal.png"
+		resource : "card_feather.png"
 	},
 	{
 		name : "legend",
 		type : 10,
-		resource : "card_metal.png"
+		resource : "card_legend.png"
 	},
 ]
 
@@ -151,5 +151,20 @@ Mon = [
 		name : "Stupidbird",
 		resource : "stupidbird.png",
 		type : 7
+	},
+	{
+		name : "Magnemite",
+		resource : "magnemite.png",
+		type : 0
+	},
+	{
+		name : "Voltorb",
+		resource : "voltorb.png",
+		type : 0
+	},
+	{
+		name : "Pikachu",
+		resource : "pikachu.png",
+		type : 8
 	}
 ]
