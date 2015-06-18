@@ -74,7 +74,7 @@ $(document).ready(function(){
 			    fontFamily: 'cursive',
 			});
 			lvRef = text1;
-			canvas.add(text1);
+			//canvas.add(text1);
 			var text2 = new fabric.Text('100', {
 				id: "hp",
 			    fontSize: 14,
@@ -83,7 +83,7 @@ $(document).ready(function(){
 			    fontFamily: 'cursive',
 			});
 			hpRef = text2;
-			canvas.add(text2);
+			//canvas.add(text2);
 			var text3 = new fabric.Text('100', {
 				id: "dm",
 			    fontSize: 14,
@@ -92,7 +92,7 @@ $(document).ready(function(){
 			    fontFamily: 'cursive',
 			});
 			dmRef = text3;
-			canvas.add(text3);
+			//canvas.add(text3);
 			var text4 = new fabric.Text('-skill 1', {
 				id: "sk1",
 				textAlign: 'left',
@@ -102,7 +102,7 @@ $(document).ready(function(){
 			    fontFamily: 'cursive',
 			});
 			sk1Ref = text4;
-			canvas.add(text4);
+			//canvas.add(text4);
 
 			var text5 = new fabric.Text('-skill 2', {
 				id: "sk2",
@@ -113,10 +113,12 @@ $(document).ready(function(){
 			    fontFamily: 'cursive',
 			});
 			sk2Ref = text5;
-			canvas.add(text5);
+			//canvas.add(text5);
 		});
 	});
 	
+	$("#listskill1").append('<option value="-1">None</option>');
+	$("#listskill2").append('<option value="-1">None</option>');
 	for (var i = 0; i < Skills.length; i++) {
 		Skills[i]["id"] = Inc[0];
 		$("#listskill").append('<option value="'+i+'">'+Skills[i].sname+'</option>');
@@ -201,5 +203,15 @@ function applyMon(){
 	canvas.renderAll();
 }
 function saveMon(){
-	console.log(canvas.toDataURL("png"));
+	card = canvas.toDataURL("png");
+	tmpCard = {
+		hp: $("#sethp").val(),
+		dm: $("#setdame").val(),
+		mn: $("#setmana").val(),
+		sk1: $("#listskill1 option:selected").text(),
+		sk2: $("#listskill2 option:selected").text(),
+	}
 }
+//Mon have healthy and decrease after battle
+//Yan for Trainer / Yin for Yumon
+//Mon increase Exp if lose or win

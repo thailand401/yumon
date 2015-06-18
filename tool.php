@@ -208,7 +208,10 @@
 		<button class="button FL" onclick="showSkill();">Show</button>
 	</div>
 </div>
-<img src="img/class.jpg">
+<div id="cardlist">
+	
+</div>
+
 </body>
 <script type="text/javascript" src="js/app.js"></script>
 </html>
