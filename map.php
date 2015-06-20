@@ -35,6 +35,9 @@
 </div>
 <script>
 	var item = "";
+	var ctrl = false;
+	var cell1 = false;
+	var cell2 = false;
 	$(document).ready(function(){
 		for(i=0;i<30;i++){
 			for(j=0;j<40;j++){
@@ -47,8 +50,47 @@
 			item = $(this).attr("src");
 		})
 		$(".cell").click(function(){
-			$(this).html("");
-			$(this).append('<img src="'+item+'"/>');
+			if(ctrl==false){
+				$(this).html("");
+				$(this).append('<img src="'+item+'"/>');
+			}else{
+				if(cell1==false){
+					cell1 = this;
+				}else{
+					cell2 = this;
+					var i1 = parseInt( $(cell1).attr("row") );
+					var j1 = parseInt( $(cell1).attr("col") );
+					var i2 = parseInt( $(cell2).attr("row") );
+					var j2 = parseInt( $(cell2).attr("col") );
+					for(i=i1;i<=i2;i++){
+						for(j=j1;j<=j2;j++){
+							$(".cell"+i+"_"+j).html("");
+							if(i==i1 && j==j1)
+								item = "resource/ground/grass_1_8.png";
+							if(i==i1 && j==j1)
+								item = "resource/ground/grass_1_8.png";
+							if(i==i1 && j==j1)
+								item = "resource/ground/grass_1_8.png";
+							if(i==i1 && j==j1)
+								item = "resource/ground/grass_1_8.png";
+							
+
+
+							$(".cell"+i+"_"+j).append('<img src="'+item+'"/>');
+						}
+					}
+					cell1 = false;
+					cell2 = false;
+				}
+			}
 		})
+		$(document).keydown("c",function(e) {
+		  	if(e.ctrlKey)
+		  		ctrl = true;
+		  	console.log(ctrl);
+		});
+		$(document).keyup("c",function(e) {
+		  		ctrl = false;
+		});
 	})
 </script>
