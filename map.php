@@ -38,17 +38,17 @@
 	$(document).ready(function(){
 		for(i=0;i<30;i++){
 			for(j=0;j<40;j++){
-				$(".board").append('<div class="cell" style="width:16px;height:16px;top:'+i*16+'px;left:'+j*16+'px"></div>');
+				$(".board").append('<div row="'+i+'" col="'+j+'" class="cell cell'+i+'_'+j+'" style="width:16px;height:16px;top:'+i*16+'px;left:'+j*16+'px"></div>');
 			}
 		}
 		$(".item").click(function(){
 			$(".item").removeClass("select");
 			$(this).addClass("select");
 			item = $(this).attr("src");
-		})	
+		})
 		$(".cell").click(function(){
 			$(this).html("");
 			$(this).append('<img src="'+item+'"/>');
-		})	
+		})
 	})
 </script>
